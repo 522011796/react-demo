@@ -1,0 +1,18 @@
+.list-item-title{
+    font-size:20px;
+}
+.list-item-value{
+    font-size:13px;
+    color:#a5a5a5;
+    margin-top:5px;
+}
+.list-item-author{
+    font-size:12px;
+    color:#a5a5a5;
+    margin-top:5px;
+}
+.line{
+    height:1px;
+    background: #eeeeee;
+    margin:10px 0px;
+}

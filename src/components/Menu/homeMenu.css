@@ -1,0 +1,26 @@
+a,a:active,a:focus,a:hover{
+    text-decoration: none;
+}
+a:hover{
+    color:#a5a5a5;
+}
+.color-a5a5a5{
+    color:#a5a5a5
+}
+.font-size12{
+    font-size:12px;
+}
+.menu-active,.menu-active:hover{
+    color:#434343;
+}
+.menu-ul{
+    list-style-type: none;
+    margin-top:20px;
+}
+.menu-ul li{
+    height:45px;
+    line-height:45px;
+}
+.menu-ul-icon{
+    margin-right:2px;
+}

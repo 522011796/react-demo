@@ -1,0 +1,31 @@
+.item-list{
+    height:200px;
+    width: 100%;
+    border:1px solid #fefefe;
+    margin-bottom:10px;
+}
+.item-list-left{
+    height:100%;
+    width: 100%;
+    background: #ffffff;
+}
+.item-list-right{
+    margin-left:55%;
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word
+}
+.img-class{
+    height:100%;
+    width: 100%;
+}
+.item-list-title{
+    font-size:20px;
+}
+.item-list-content{
+    color:#a5a5a5;
+}
+.item-list-author{
+    color:#a5a5a5;
+    font-size:12px;
+}

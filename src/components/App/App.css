@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+.app-content{
+  height:100%;
+  background:#f7f7f7;
+  width:100%;
+  margin-top:60px;
+}
+.app-left-menu{
+  width: 240px;
+  height:100%;
+  background: #f7f7f7;
+  float: left;
+}
+.app-right-menu{
+  margin-left:240px;
+
+  position: relative;
+}
+.app-right-left-content{
+  position: absolute;
+  right:5%;
+  top:20px;
+  width: 150px;
+  z-index: 999;
+}
+.app-right-left-content .item-title{
+  height:30px;
+  line-height:30px;
+  color:#a5a5a5;
+  font-size:12px;
+}
+.app-right-left-content .item-value{
+  height:30px;
+  line-height:30px;
+  color:#a5a5a5;
+  font-size:12px;
+}
