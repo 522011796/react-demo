@@ -8,6 +8,7 @@
     height:100%;
     width: 100%;
     background: #ffffff;
+    position: relative;
 }
 .item-list-right{
     margin-left:55%;
@@ -28,4 +29,18 @@
 .item-list-author{
     color:#a5a5a5;
     font-size:12px;
+}
+.item-list-item-content{
+    width: 200px;
+    margin:0 auto;
+    z-index: 9;
+    position: relative;
+    top:-70%;
+}
+.item-list-text{
+    position: absolute;
+    top:20%;
+    left:15%;
+    color:#ffffff;
+    font-size:25px;
 }
