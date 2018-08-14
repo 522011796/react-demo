@@ -15,22 +15,19 @@ import HeaderMenu from '../Header/header'
 class App extends Component {
   state = {
     headerMenu : '',
-    sliderMenu : ''
+    sliderMenu : '',
+    mainStyle:{}
   }
   selHeader(menu,slider){
     this.setState({headerMenu: menu,sliderMenu : slider});
   }
+
   render() {
-    var h = document.documentElement.clientHeight || document.body.clientHeight;
-    var mainStyle = {
-        height:h-60,
-        overflowY:'auto'
-    };
     return (
       <div>
           <Layout>
               <HeaderMenu selHeadrMenu={(menu,slider)=>this.selHeader(menu,slider)}></HeaderMenu>
-              <div className='app-content' style={mainStyle}>
+              <div className='app-content' style={this.state.mainStyle}>
                 <div className='app-left-menu'>
                     <HomeMenu sliderMenu={this.state.headerMenu} sliderLeftMenu={this.state.sliderMenu}></HomeMenu>
                 </div>
@@ -60,6 +57,32 @@ class App extends Component {
       </div>
     );
   }
+  initScreen(){
+      var h = document.documentElement.clientHeight || document.body.clientHeight;
+      this.setState({
+          mainStyle : {
+              height: h - 60,
+              overflowY: 'auto'
+          }
+      });
+  }
+  screenChange() {
+    var _self = this;
+    window.addEventListener('resize', function () {
+        _self.initScreen();
+    });
+  }
+  componentDidMount() {
+      this.initScreen();
+      this.screenChange();
+  }
+
+    componentWillUnmount() {
+        var _self = this;
+        window.removeEventListener('resize', function () {
+            _self.initScreen();
+        });
+    }
 }
 
 export default App;
