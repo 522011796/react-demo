@@ -5,8 +5,8 @@
     position: fixed;
     zIndex: 1;
     width: 100%;
-    background:#f5f5f5;
-    box-shadow: 3px 3px 5px #dddddd
+    background:#ffffff;
+    box-shadow: 3px 3px 5px #dddddd;
 }
 .head-logo{
     float:left;

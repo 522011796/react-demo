@@ -117,7 +117,7 @@ class App extends Component {
           {/*<div>
               <div dangerouslySetInnerHTML = {{ __html:this.state.showHtml }}></div>
           </div>*/}
-          <Layout>
+          <Layout style={{background:'#f7f7f7'}}>
               <HeaderMenu selHeadrMenu={(menu,slider)=>this.selHeader(menu,slider)}></HeaderMenu>
               <div className='app-content' style={this.state.mainStyle}>
                 <div className='app-left-menu'>

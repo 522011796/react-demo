@@ -22,28 +22,30 @@ class HeaderMenu extends Component {
     render() {
         return (
             <div className='head-class'>
-                <div className='head-logo text-center'>
-                    logo
-                </div>
-                <div className='head-menu-main'>
-                    <div className='head-menu-item'>
-                        <Link to="/" >
+                <div style={{width:'1120px',margin:'0 auto'}}>
+                    <div className='head-logo'>
+                        logo
+                    </div>
+                    <div className='head-menu-main'>
+                        <div className='head-menu-item'>
+                            <Link to="/" >
                             <span className={this.state.headActive === 'menu1' ? 'head-active head-menu-child-item' : 'head-menu-child-item'} onClick={() => this.selMenu('menu1','home')}>
                                 菜单一
                             </span>
-                        </Link>
+                            </Link>
 
-                        <Link to="/home2">
+                            <Link to="/home2">
                             <span className={this.state.headActive === 'menu2' ? 'head-active head-menu-child-item' : 'head-menu-child-item'} onClick={() => this.selMenu('menu2','home2')}>
                                 菜单二
                             </span>
-                        </Link>
+                            </Link>
+                        </div>
+                        <div style={{position:'absolute',right:'20px',top:'0px',color:'#a5a5a5'}}>
+                            admin
+                        </div>
                     </div>
-                    <div style={{position:'absolute',right:'20px',top:'0px',color:'#a5a5a5'}}>
-                        admin
-                    </div>
+                    <div style={{clear:'both'}}></div>
                 </div>
-                <div style={{clear:'both'}}></div>
             </div>
         );
     }

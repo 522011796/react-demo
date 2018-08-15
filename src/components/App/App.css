@@ -5,16 +5,18 @@
   height:100%;
   background:#f7f7f7;
   width:100%;
+  margin:0 auto;
   margin-top:60px;
+  width:1120px;
 }
 .app-left-menu{
-  width: 240px;
+  width: 160px;
   height:100%;
   background: #f7f7f7;
   float: left;
 }
 .app-right-menu{
-  margin-left:240px;
+  margin-left:160px;
 
   position: relative;
 }

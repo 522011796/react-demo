@@ -24,7 +24,7 @@ class HomeMenu extends Component {
     }
     render() {
         return (
-            <div style={{textAlign:'left',marginLeft:'70px'}}>
+            <div style={{textAlign:'left',marginLeft:'0px'}}>
                 {this.props.sliderMenu === 'menu1' &&
                     <ul className='menu-ul'>
                         <Link to="/" className={this.state.sliderMenu === 'home' ? 'color-a5a5a5 font-size12 menu-active' : 'color-a5a5a5 font-size12'} onClick={() => this.selSilder('home')}>
