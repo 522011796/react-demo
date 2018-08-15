@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from 'antd';
 
 import './homeMenu.css'
+import FontAwesome from 'react-fontawesome';
 
 /**
  * 0、获取和传递组件值，用props
@@ -28,17 +29,17 @@ class HomeMenu extends Component {
                     <ul className='menu-ul'>
                         <Link to="/" className={this.state.sliderMenu === 'home' ? 'color-a5a5a5 font-size12 menu-active' : 'color-a5a5a5 font-size12'} onClick={() => this.selSilder('home')}>
                             <li>
-                                <Icon type="home" className='menu-ul-icon'/>IT技术
+                                <Icon type="desktop" className='menu-ul-icon'/>IT技术
                             </li>
                         </Link>
                         <Link to="/photography" className={this.state.sliderMenu === 'photography' ? 'color-a5a5a5 font-size12 menu-active' : 'color-a5a5a5 font-size12'} onClick={() => this.selSilder('photography')}>
                             <li>
-                                <Icon type="home" className='menu-ul-icon'/>摄影、游记
+                                <Icon type="camera-o" className='menu-ul-icon'/>摄影、游记
                             </li>
                         </Link>
                         <Link to="/music" className={this.state.sliderMenu === 'music' ? 'color-a5a5a5 font-size12 menu-active' : 'color-a5a5a5 font-size12'} onClick={() => this.selSilder('music')}>
                             <li>
-                                <Icon type="home" className='menu-ul-icon'/>音乐笔记
+                                <FontAwesome name='music' className='menu-ul-icon'/>音乐笔记
                             </li>
                         </Link>
                     </ul>}

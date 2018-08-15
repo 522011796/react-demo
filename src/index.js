@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import App from "./components/App/App";
 import Login from "./components/login";
+import 'font-awesome/css/font-awesome.min.css'
 
 ReactDOM.render(
     <div>

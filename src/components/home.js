@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Icon } from 'antd';
 import './../css/common.css'
 import axios from 'axios'
+import marked from 'marked';
 
 class Home extends Component {
     constructor(props){
@@ -11,6 +12,9 @@ class Home extends Component {
             isFirst:false
         };
     }
+    removeAllHtml = function (html) {
+        return html.replace(/<[^>]+>/g, '');
+    };
     init(){
         var data = {
             params:{
@@ -32,7 +36,8 @@ class Home extends Component {
                     <div>
                         <div className='list-item-title'>{item.title}</div>
                         <div className='list-item-value'>
-                            {item.content}
+                            {this.removeAllHtml(marked(item.content.substring(0,100)+'......'))}
+                            {/*<div dangerouslySetInnerHTML = {{ __html:marked(item.content.substring(0.10)) }}></div>*/}
                         </div>
                         <div className='list-item-author'>
                             <span>ricky</span>
