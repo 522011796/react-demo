@@ -27,3 +27,17 @@
     height:100px;
     width: 100px;
 }
+.modalMain .ant-modal-content{
+    border-radius: 0px;
+    filter:alpha(opacity=90);
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+.modalMain .ant-modal-header {
+    padding: 16px 24px;
+    border-radius: 0;
+    background: none;
+    color: rgba(0, 0, 0, 0.65);
+    border-bottom: 1px solid #e8e8e8;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Modal } from 'antd';
 import axios from "axios/index";
 import marked from 'marked';
+import './.././../css/common.css'
 /**
  0、获取和传递组件值，用props
  1、selHeaderMenu：同子组件headerjs进行通信的函数，不需要在自身组件中定义，只需要在子组件中定义
@@ -35,6 +36,7 @@ class ModalDetail extends Component {
         return (
             <div>
                 <Modal
+                    className='modalMain'
                     width='800px'
                     style={{ top: 10 }}
                     title={this.state.title}
