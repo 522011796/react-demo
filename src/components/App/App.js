@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Layout,Icon,Button,Drawer,Input,Select } from 'antd';
+import { Layout,Icon,Button,Drawer,Input,Select,Modal } from 'antd';
 import RouteConfig from './../../router/index'
 import HomeMenu from './../Menu/homeMenu'
 import HeaderMenu from '../Header/header'
@@ -9,7 +9,6 @@ import axios from "axios/index";
 import SimpleMDE from 'react-simplemde-editor';
 import "simplemde/dist/simplemde.min.css";
 
-import marked from 'marked';
 import qs from 'qs';
 
 //const { Header } = Layout;
@@ -164,7 +163,7 @@ class App extends Component {
                       <Option value="3">音乐笔记</Option>
                   </Select>
                   <div>
-                      <Input placeholder="用于展示列表缩率图" value={this.state.mainPic} data-type='mainPic' onChange={this.onChangeInput} style={{marginBottom:'10px',width:'40%'}}/>
+                      <Input placeholder="用于展示列表缩率图,请填写图片网络地址" value={this.state.mainPic} data-type='mainPic' onChange={this.onChangeInput} style={{marginBottom:'10px',width:'40%'}}/>
                   </div>
                   <div>
                       <Input placeholder="用于展示列表缩率图上的文字，限制15个字符" value={this.state.mainText} data-type='mainText' onChange={this.onChangeInput} style={{marginBottom:'10px',width:'40%'}} maxLength='15'/>
