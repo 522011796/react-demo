@@ -1,0 +1,21 @@
+.loginMain{
+    background: #f7f7f7;
+    height:100%;
+    width: 100%;
+}
+.loginContent{
+    width: 480px;
+    height:668px;
+    background: #ffffff;
+    margin:60px auto 0px auto;
+    padding:90px 92px 30px 92px;
+    box-shadow: 2px 2px 2px 2px #dddddd;
+}
+.loginTitle{
+    font-size:35px;
+    font-weight: bold;
+    text-align: center;
+}
+.loginOpr{
+    margin-top:65px;
+}
