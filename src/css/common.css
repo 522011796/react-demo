@@ -27,6 +27,9 @@
     height:100px;
     width: 100px;
 }
+.modalMain img{
+    width: 100% !important;
+}
 .modalMain .ant-modal-content{
     border-radius: 0px;
     filter:alpha(opacity=90);

@@ -58,7 +58,6 @@ class ModalDetail extends Component {
         if (this.state.visibleModel !== nextProps.selModalDetail) {
             var data = {
                 params:{
-                    type:1,
                     id:nextProps.selModalId
                 }
             };
@@ -66,7 +65,7 @@ class ModalDetail extends Component {
                 return;
             }
             axios.get('/artical/detail',data).then(result => {
-                //console.log(result.data.data[0].title);
+                console.log(result);
                 _self.setState({
                     title: result.data.data[0].title,
                     content: result.data.data[0].content

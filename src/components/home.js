@@ -58,7 +58,7 @@ class Home extends Component {
                     this.state.contentList.map((item,index) =>
                         <div style={{marginTop:'20px',marginLeft:'15px'}} key={index}>
                             <div>
-                                <span className='list-item-title'onClick={() => this.setModalStatus(item.id)}>
+                                <span className='list-item-title' onClick={() => this.setModalStatus(item.id)}>
                                     {item.title}
                                 </span>
                                 <div className='list-item-value'>
