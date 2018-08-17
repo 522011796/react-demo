@@ -3,9 +3,7 @@ import './../../css/common.css'
 import './index.css'
 import axios from "axios/index";
 
-import marked from "marked";
 import ModalDetail from "./../common/modal";
-import hljs from 'highlight.js';
 import 'highlight.js/styles/arta.css';
 
 class Music extends Component {

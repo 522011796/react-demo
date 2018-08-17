@@ -5,7 +5,6 @@ import RouteConfig from './../../router/index'
 import HomeMenu from './../Menu/homeMenu'
 import HeaderMenu from '../Header/header'
 import axios from "axios/index";
-import {getSession} from "./../../common/common"
 
 import SimpleMDE from 'react-simplemde-editor';
 import "simplemde/dist/simplemde.min.css";

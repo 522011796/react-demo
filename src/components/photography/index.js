@@ -6,7 +6,6 @@ import axios from "axios/index";
 import moment from 'moment';
 import marked from "marked";
 import ModalDetail from "./../common/modal";
-import hljs from 'highlight.js';
 import 'highlight.js/styles/arta.css';
 
 class Photography extends Component {
