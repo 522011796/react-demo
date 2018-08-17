@@ -34,7 +34,7 @@ class HeaderMenu extends Component {
             <div className='head-class'>
                 <div style={{width:'1120px',margin:'0 auto'}}>
                     <div className='head-logo'>
-                        logo
+                        ricky
                     </div>
                     <div className='head-menu-main'>
                         <div className='head-menu-item'>
