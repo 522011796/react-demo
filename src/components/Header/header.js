@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
+import { Avatar } from 'antd';
+import axios from "axios/index";
 
 class HeaderMenu extends Component {
     state = {
-        headActive:'menu1'
+        headActive:'menu1',
+        admin:''
     };
     selMenu(menu,silder){
         /**
@@ -18,6 +21,13 @@ class HeaderMenu extends Component {
         //保存header选中的位置记录
         localStorage.setItem("headerMenu",menu);
         localStorage.setItem("silderMenu",silder);
+    }
+    getSession(){
+        axios.get('/sessionInfo').then(result => {
+            this.setState({
+                admin:result.data.data
+            });
+        });
     }
     render() {
         return (
@@ -41,7 +51,11 @@ class HeaderMenu extends Component {
                             </Link>
                         </div>
                         <div style={{position:'absolute',right:'20px',top:'0px',color:'#a5a5a5'}}>
-                            admin
+                            <Avatar size="small" icon="user" />
+                            {
+                                this.state.admin === 'admin' &&
+                                <span style={{marginLeft:'5px'}}>admin</span>
+                            }
                         </div>
                     </div>
                     <div style={{clear:'both'}}></div>
@@ -56,6 +70,7 @@ class HeaderMenu extends Component {
         let silder = localStorage.getItem("silderMenu");
         this.props.selHeadrMenu(menu ? menu : 'menu1',silder ? silder : 'home');
         this.setState({headActive: menu ? menu : 'menu1'});
+        this.getSession();
     }
 
 }

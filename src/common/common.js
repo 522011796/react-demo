@@ -1,6 +1,8 @@
-var common={
-    closeModal(){
+import axios from "axios/index";
 
-    }
+export function getSession(){
+    axios.get('/sessionInfo').then(result => {
+        console.log(result.data);
+        return result;
+    });
 }
-export default common

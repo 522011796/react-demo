@@ -4,7 +4,8 @@ import './../css/common.css'
 import axios from 'axios'
 import marked from 'marked';
 import ModalDetail from "./common/modal";
-import commonJs from './../common/common'
+import hljs from 'highlight.js';
+import 'highlight.js/styles/arta.css';
 
 class Home extends Component {
     constructor(props){
@@ -90,6 +91,9 @@ class Home extends Component {
     }
     componentDidMount() {
         this.init();
+        marked.setOptions({
+            highlight: code => hljs.highlightAuto(code).value,
+        });
     }
     componentDidUpdate(){
 

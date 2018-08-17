@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Layout,Icon,Button,Drawer,Input,Select,Modal } from 'antd';
+import { Layout,Icon,Button,Drawer,Input,Select } from 'antd';
 import RouteConfig from './../../router/index'
 import HomeMenu from './../Menu/homeMenu'
 import HeaderMenu from '../Header/header'
 import axios from "axios/index";
+import {getSession} from "./../../common/common"
 
 import SimpleMDE from 'react-simplemde-editor';
 import "simplemde/dist/simplemde.min.css";
@@ -34,7 +35,8 @@ class App extends Component {
         type:1,
         mainPic:'',
         mainText:'',
-        errorTips:''
+        errorTips:'',
+        admin:''
       };
     }
   selHeader(menu,slider){
@@ -103,6 +105,13 @@ class App extends Component {
     //console.log(value); // { key: "lucy", label: "Lucy (101)" }
     this.setState({type: value})
   }
+  getSession(){
+      axios.get('/sessionInfo').then(result => {
+          this.setState({
+              admin:result.data.data
+          });
+      });
+  }
   render() {
     let list = null;
     const Option = Select.Option;
@@ -128,9 +137,11 @@ class App extends Component {
                     </div>
                     {/*右侧快捷菜单*/}
                     <div className='app-right-left-content'>
+                        {this.state.admin === 'admin' &&
                         <Button block size='small' onClick={this.showDrawer}>
                             <span className='addArticel'>添加文章</span>
                         </Button>
+                        }
                         <div className='item-title'>
                             最近更新
                         </div>
@@ -199,9 +210,6 @@ class App extends Component {
   }
   init(){
       axios.get('/updateData').then(result => {
-          const input = result.data.data;
-          /*const output = marked(input[0].content);
-          console.log(output);*/
           this.setState({
               contentList: result.data.data,
               isFirst:true,
@@ -228,6 +236,7 @@ class App extends Component {
       this.init();
       this.initScreen();
       this.screenChange();
+      this.getSession();
   }
 
     componentWillUnmount() {
